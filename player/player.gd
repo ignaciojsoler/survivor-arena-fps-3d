@@ -64,6 +64,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = 10.00
+	elif Input.is_action_just_released("ui_accept") and velocity.y > 0:
+		velocity.y = 0.0
 	
 	# Move the character and handle collisions
 	move_and_slide()
