@@ -36,7 +36,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _physics_process(delta: float) -> void:
-	const SPEED = 12
+	var speed = 8 if is_on_floor() else 4
+
+	# Allow the player to run
+	if Input.is_action_pressed("ui_run"):
+		speed = speed * 1.5
+
 	
 	# Get keyboard input as a 2D direction
 	# X = left/right, Y = forward/backward
@@ -56,8 +61,8 @@ func _physics_process(delta: float) -> void:
 	var direction = transform.basis * input_direction_3d
 	
 	# Set horizontal movement speed
-	velocity.x = direction.x * SPEED
-	velocity.z = direction.z * SPEED
+	velocity.x = direction.x * speed
+	velocity.z = direction.z * speed
 	
 	const GRAVITY = 20
 	velocity.y -= GRAVITY * delta
