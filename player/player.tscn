@@ -26,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.454192, -0.5248375)
 transform = Transform3D(-0.525, 0, -7.9272795e-08, 0, 0.525, 0, 7.9272795e-08, 0, -0.525, 0.6413859, -0.4723704, -0.9692917)
 
 [node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=2005298380]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64082694, -0.4544871, -1.2362049)
 
 [node name="MeshBody" type="MeshInstance3D" parent="." unique_id=1839096071]

@@ -36,6 +36,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _physics_process(delta: float) -> void:
+	# Don't let the player run through the air!
 	var speed = 8 if is_on_floor() else 4
 
 	# Allow the player to run
@@ -70,11 +71,17 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = 10.00
 	elif Input.is_action_just_released("ui_accept") and velocity.y > 0:
-		velocity.y = 0.0
+		velocity.y = 1.0
 	
 	# Move the character and handle collisions
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("ui_shoot"):
+		shoot_bullet()
 
 func shoot_bullet():
 	const BULLET_3D = preload("res://player/bullet_3d.tscn")
-	print(BULLET_3D)
+	var new_bullet = BULLET_3D.instantiate()
+	
+	%Marker3D.add_child(new_bullet)
+	new_bullet.global_transform = %Marker3D.global_transform
