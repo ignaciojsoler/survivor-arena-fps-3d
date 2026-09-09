@@ -74,3 +74,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Move the character and handle collisions
 	move_and_slide()
+
+func shoot_bullet():
+	const BULLET_3D = preload("res://player/bullet_3d.tscn")
+	print(BULLET_3D)
