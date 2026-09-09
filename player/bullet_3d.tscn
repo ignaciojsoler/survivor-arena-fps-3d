@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dgbvv4koqlc3s"]
 
+[ext_resource type="Script" uid="uid://du4r484gwnn2d" path="res://player/bullet_3d.gd" id="1_hgguu"]
 [ext_resource type="PackedScene" uid="uid://c557hpvl40knx" path="res://player/projectile_3d.tscn" id="1_kixxk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5otli"]
 radius = 0.4
 
 [node name="Bullet3D" type="Area3D" unique_id=1873230057]
+script = ExtResource("1_hgguu")
 
 [node name="Projectile3D" parent="." unique_id=1753411486 instance=ExtResource("1_kixxk")]
 transform = Transform3D(-2.4259823e-08, 0, 0.55499995, 0, 0.55499995, 0, -0.55499995, 0, -2.4259823e-08, 0, 0, 0)
