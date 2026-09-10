@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5pkmlx47sk3t"]
 
-[ext_resource type="PackedScene" uid="uid://7c0txmvud37g" path="res://mob/bat/bat_model.glb" id="1_ifc7n"]
+[ext_resource type="PackedScene" uid="uid://d1g85cw1ca624" path="res://mob/bat/bat_model.tscn" id="1_ifc7n"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5otli"]
 radius = 0.35687125
@@ -8,27 +8,7 @@ radius = 0.35687125
 [node name="Mob" type="RigidBody3D" unique_id=1118745843]
 gravity_scale = 0.0
 
-[node name="bat_model" parent="." unique_id=1774293813 instance=ExtResource("1_ifc7n")]
-
-[node name="Skeleton3D" parent="bat_model/Armature" parent_id_path=PackedInt32Array(1774293813, 2124240537) index="0" unique_id=1407558383]
-bones/0/position = Vector3(0, -0.007400004, 0)
-bones/1/rotation = Quaternion(-0.028654926, 0.18848532, -0.6867176, 0.7014778)
-bones/2/rotation = Quaternion(-0.056015443, -0.016041048, 0.27483782, 0.9597235)
-bones/3/rotation = Quaternion(0.04121358, 0.059984986, 0.2647528, 0.96156603)
-bones/4/rotation = Quaternion(-0.028654926, -0.18848532, 0.6867176, 0.7014778)
-bones/5/rotation = Quaternion(-0.056015443, 0.016041048, -0.27483782, 0.9597235)
-bones/6/rotation = Quaternion(0.04121358, -0.059984986, -0.2647528, 0.96156603)
-bones/7/position = Vector3(0.1309921, -0.22739176, -0.087851465)
-bones/7/rotation = Quaternion(0.26196837, 0.08345512, 0.26575127, 0.9240044)
-bones/8/rotation = Quaternion(3.8433356e-08, 0.69088244, 0.72296715, 1.6451473e-08)
-bones/10/position = Vector3(-0.1309921, -0.22739176, -0.087851465)
-bones/10/rotation = Quaternion(0.26196837, -0.083455116, -0.26575127, 0.9240044)
-bones/11/rotation = Quaternion(2.5423756e-08, 0.69088244, 0.72296715, 3.637758e-08)
-
-[node name="AnimationPlayer" parent="bat_model" index="1" unique_id=262123562]
-autoplay = &"Idle"
+[node name="bat_model" parent="." unique_id=917276026 instance=ExtResource("1_ifc7n")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=617340537]
 shape = SubResource("SphereShape3D_5otli")
-
-[editable path="bat_model"]
