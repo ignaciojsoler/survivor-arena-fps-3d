@@ -88,19 +88,19 @@ node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Idle", &"OneShot"
 [node name="bat_model" unique_id=917276026 instance=ExtResource("1_1he7g")]
 
 [node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(2124240537) index="0" unique_id=1407558383]
-bones/0/position = Vector3(0, -0.02060518, 0)
-bones/1/rotation = Quaternion(-0.060240068, 0.21366112, -0.6639457, 0.7140702)
-bones/2/rotation = Quaternion(-0.15611105, -0.04185327, 0.25540486, 0.95322925)
-bones/3/rotation = Quaternion(-0.084663756, 0.028201178, 0.22568005, 0.9701058)
-bones/4/rotation = Quaternion(-0.060240068, -0.21366112, 0.6639457, 0.7140702)
-bones/5/rotation = Quaternion(-0.15611105, 0.04185327, -0.25540486, 0.95322925)
-bones/6/rotation = Quaternion(-0.084663756, -0.028201178, -0.22568005, 0.9701058)
+bones/0/position = Vector3(0, -0.023599999, 0)
+bones/1/rotation = Quaternion(-0.014429992, 0.16132991, -0.63527936, 0.7551057)
+bones/2/rotation = Quaternion(-0.17814127, -0.054297585, 0.28658086, 0.93978137)
+bones/3/rotation = Quaternion(-0.19391094, 0.004328275, 0.21674699, 0.9567657)
+bones/4/rotation = Quaternion(-0.014429992, -0.16132991, 0.63527936, 0.7551057)
+bones/5/rotation = Quaternion(-0.17814127, 0.054297585, -0.28658086, 0.93978137)
+bones/6/rotation = Quaternion(-0.19391094, -0.004328275, -0.21674699, 0.9567657)
 bones/7/position = Vector3(0.1309921, -0.22739176, -0.087851465)
 bones/7/rotation = Quaternion(0.26196837, 0.08345512, 0.26575127, 0.9240044)
-bones/8/rotation = Quaternion(3.960078e-08, 0.64556444, 0.7637059, 2.4944558e-08)
+bones/8/rotation = Quaternion(3.2825156e-08, 0.57949585, 0.81497526, 1.9240982e-08)
 bones/10/position = Vector3(-0.1309921, -0.22739176, -0.087851465)
 bones/10/rotation = Quaternion(0.26196837, -0.083455116, -0.26575127, 0.9240044)
-bones/11/rotation = Quaternion(2.6228573e-08, 0.64556444, 0.7637059, 3.3931396e-08)
+bones/11/rotation = Quaternion(2.7677881e-08, 0.57949585, 0.81497526, 4.839727e-08)
 
 [node name="bat" parent="Armature/Skeleton3D" index="0" unique_id=1354667132]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
