@@ -17,7 +17,7 @@ fog_density = 0.0
 fog_height = -0.5
 fog_height_density = 0.085
 
-[node name="Game" type="Node3D" unique_id=1558321230]
+[node name="Node3D" type="Node3D" unique_id=1558321230]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=996682352]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 2.0825531, -0.5799999, 0)
