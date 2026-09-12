@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nu7ilrvi3f" path="res://player/player.tscn" id="1_80nbo"]
 [ext_resource type="Material" uid="uid://8aig2kxbbwcy" path="res://level/platform.tres" id="1_feb5d"]
 [ext_resource type="Material" uid="uid://j3sj8narum1p" path="res://level/bridge.tres" id="2_feb5d"]
-[ext_resource type="PackedScene" uid="uid://c5pkmlx47sk3t" path="res://mob/Mob.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://b7hbtu84h661t" path="res://mob/spawner/mob_spawner_3d.tscn" id="4_fc0e3"]
 
 [sub_resource type="Environment" id="Environment_5otli"]
 background_mode = 1
@@ -95,5 +95,5 @@ environment = SubResource("Environment_5otli")
 
 [node name="Player" parent="." unique_id=1825894043 instance=ExtResource("1_80nbo")]
 
-[node name="Mob" parent="." unique_id=1118745843 instance=ExtResource("4_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8)
+[node name="MobSpawner3D" parent="." unique_id=309067028 instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
