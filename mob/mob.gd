@@ -4,7 +4,11 @@ signal died
 
 @onready var bat_model: Node3D = %bat_model
 @onready var player: CharacterBody3D = get_node("/root/Game/Player")
+
 @onready var timer: Timer = %Timer
+
+@onready var damage_sound: AudioStreamPlayer3D = %DamageSound
+@onready var ko_sound: AudioStreamPlayer3D = %KOSound
 
 var speed: float = randf_range(2.0, 4.0)
 var health: int = 3 # Lifes of the mob
@@ -27,9 +31,11 @@ func _physics_process(_delta: float) -> void:
 
 
 func take_damage():
-	bat_model.hurt()
+	if health == 0: return
 	
+	bat_model.hurt()
 	health -= 1
+	damage_sound.play()
 	
 	if health == 0:
 		set_physics_process(false)
@@ -40,7 +46,7 @@ func take_damage():
 		apply_central_impulse(direction * 10 + random_upward_force)
 		
 		died.emit()
-		
+		ko_sound.play()
 		timer.start()
 
 

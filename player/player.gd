@@ -4,6 +4,8 @@ const MOUSE_SEN = 0.5
 const MIN_CLAMP = -60
 const MAX_CLAMP = 60
 
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+
 func _ready():
 	# Hide the mouse cursor when the game starts
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -87,3 +89,4 @@ func shoot_bullet():
 	new_bullet.global_transform = %Marker3D.global_transform
 	
 	%Timer.start()
+	audio_stream_player.play()
