@@ -24,6 +24,9 @@ font_size = 48
 [sub_resource type="LabelSettings" id="LabelSettings_nb4d6"]
 font_size = 48
 
+[sub_resource type="LabelSettings" id="LabelSettings_wwd58"]
+font_size = 48
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5otli"]
 
 [node name="Game" type="Node3D" unique_id=1558321230]
@@ -133,6 +136,19 @@ offset_bottom = 130.0
 grow_horizontal = 2
 text = "Time left: 0"
 label_settings = SubResource("LabelSettings_nb4d6")
+
+[node name="Health" type="Label" parent="." unique_id=1069497494]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -372.0
+offset_top = 63.0
+offset_right = -82.0
+offset_bottom = 130.0
+grow_horizontal = 0
+text = "Health: 1000"
+label_settings = SubResource("LabelSettings_wwd58")
 
 [node name="KillPlane" type="Area3D" parent="." unique_id=1252442810]
 collision_layer = 0

@@ -2,12 +2,16 @@ extends Node3D
 
 @onready var label: Label = %"Score label"
 @onready var time_left_label = %"Time Left label"
+@onready var health = %Health
 
 var player_score = 0
 var time_left = 30
 
 func _ready():
 	time_left_label.text = "Time left: " + str(time_left)
+	
+func _process(delta):
+	health.text = "Health: " + str(Globals.health)
 
 func increase_score():
 	player_score += 1
@@ -31,6 +35,7 @@ func _on_mob_spawner_3d_mob_spawned(mob: Mob) -> void:
 
 func _on_kill_plane_body_entered(body: Node3D) -> void:
 	if body is Player:
+		Globals.restart()
 		get_tree().reload_current_scene.call_deferred()
 
 

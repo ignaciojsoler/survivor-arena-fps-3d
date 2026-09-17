@@ -10,6 +10,7 @@ radius = 0.35687125
 
 [node name="Mob" type="RigidBody3D" unique_id=1118745843]
 gravity_scale = 0.0
+max_contacts_reported = 1
 script = ExtResource("1_bgsa1")
 
 [node name="bat_model" parent="." unique_id=917276026 instance=ExtResource("1_ifc7n")]

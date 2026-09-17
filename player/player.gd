@@ -7,6 +7,7 @@ const MIN_CLAMP = -60
 const MAX_CLAMP = 60
 
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var hurt_area = %HurtArea
 
 func _ready():
 	# Hide the mouse cursor when the game starts
@@ -82,6 +83,13 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("ui_shoot") and %Timer.is_stopped():
 		shoot_bullet()
+		
+	var mob_count = 0
+	for body in hurt_area.get_overlapping_bodies():
+		if body is Mob:
+			mob_count += 1
+	
+	Globals.health -= mob_count
 
 func shoot_bullet():
 	const BULLET_3D = preload("res://player/bullet_3d.tscn")
