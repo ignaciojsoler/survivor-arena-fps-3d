@@ -1,5 +1,8 @@
 extends RigidBody3D
 
+class_name Mob
+
+signal defeated
 signal died
 
 @onready var bat_model: Node3D = %bat_model
@@ -45,10 +48,11 @@ func take_damage():
 		var random_upward_force = Vector3.UP * randf_range(1, 5)
 		apply_central_impulse(direction * 10 + random_upward_force)
 		
-		died.emit()
 		ko_sound.play()
+		defeated.emit()
 		timer.start()
 
 
 func _on_timer_timeout() -> void:
+	died.emit()
 	queue_free()

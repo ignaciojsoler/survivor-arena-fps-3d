@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+class_name Player
+
 const MOUSE_SEN = 0.5
 const MIN_CLAMP = -60
 const MAX_CLAMP = 60
